@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Beach View Hotel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Js -->
+    <script src="js/custom.js" />
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/min/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.js"></script>
+
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/google-map-init.js"></script>
+
+
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+      var pemenang = localStorage.getItem("pemenang");
+      pemenang = JSON.parse(pemenang);
+      console.log(pemenang)
+
+      function codeAddress() {
+          getResult();
+
+          document.getElementById("satu-nama").innerHTML = data[pemenang[0]].name;
+          document.getElementById("satu-harga").innerHTML = data[pemenang[0]].price;
+          document.getElementById("satu-add").innerHTML = data[pemenang[0]].address;
+          document.getElementById("satu-web").innerHTML = data[pemenang[0]].web;
+          document.getElementById("satu-short").innerHTML = data[pemenang[0]].shortdesc;
+          document.getElementById("satu-img").src=data[pemenang[0]].img[0];
+          console.log("nama 1 ",data[pemenang[0]].name)
+          document.getElementById("dua-nama").innerHTML = data[pemenang[1]].name;
+          document.getElementById("dua-harga").innerHTML = data[pemenang[1]].price;
+          document.getElementById("dua-add").innerHTML = data[pemenang[1]].address;
+          document.getElementById("dua-web").innerHTML = data[pemenang[1]].web;
+          document.getElementById("dua-short").innerHTML = data[pemenang[1]].shortdesc;
+          document.getElementById("dua-img").src=data[pemenang[1]].img[0];
+
+          document.getElementById("tiga-nama").innerHTML = data[pemenang[2]].name;
+          document.getElementById("tiga-harga").innerHTML = data[pemenang[2]].price;
+          document.getElementById("tiga-add").innerHTML = data[pemenang[2]].address;
+          document.getElementById("tiga-web").innerHTML = data[pemenang[2]].web;
+          document.getElementById("tiga-short").innerHTML = data[pemenang[2]].shortdesc;
+          document.getElementById("tiga-img").src=data[pemenang[2]].img[0];
+      }
+      window.onload = codeAddress;
+
+      function setVisitSatu() {
+          console.log("mo dikirim", pemenang[0])
+          localStorage.setItem("visit", pemenang[0]);
+      }
+
+      function setVisitDua() {
+          localStorage.setItem("visit", pemenang[1]);
+      }
+
+      function setVisitTiga() {
+          // console.log("visit harusnya ", pemenang[2])
+          localStorage.setItem("visit", pemenang[2]);
+      }
+      
+    </script>
+  </head>
+  <body>
+
+
+
+    <!-- Header Start -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- header Nav Start -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <h4><b>Decision Support System for Beach View Hotel</b></h4>
+                </a>
+              </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header close -->
+       
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <div class="section-title text-center">
+                <h2>Here is our recomendation for you:</h2>
+            </div>
+          </div>
+          <a href="detailHotel.html" class="warna-hitam" onclick="setVisitSatu()">
+            <div class="list-hotel">
+              <div class="col-md-7 col-sm-12 list-hotel-info">
+                  <div>
+                      <h2 class="list-hotel-title" id="satu-nama"></h2>
+                      <p class="harga-hotel" id="satu-harga"></p>
+                      <b>Address:</b><p class="list-hotel-description" id="satu-add"> Jalan Pantai Barat No 91, Kawasan Pangandaran, Pangandaran, Indonesia, 46596</p>
+                      <b>Website:</b><p class="list-hotel-description" id="satu-web"> https://booking.myhorison.com/</p>
+                      <b>Description:</b><p class="list-hotel-description" id="satu-short"> Staying at Horison Palma Pangandaran is a good choice when you are visiting Pantai Barat. This hotel is very easy to find since it is strategically positioned close to public facilities.</p>
+                  </div>
+                  <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>-->
+              </div><!-- .col-md-7 close -->
+              <div class="col-md-5 col-sm-12">
+                  <div class="block list-hotel-image">
+                    <img alt="Img" id="satu-img">
+                  </div>
+              </div><!-- .col-md-5 close -->
+            </div>
+          </a>
+
+          <a href="detailHotel.html" class="warna-hitam" onclick="setVisitDua()">
+            <div class="list-hotel">
+              <div class="col-md-7 col-sm-12 list-hotel-info">
+                  <div>
+                      <h2 class="list-hotel-title" id="dua-nama"></h2>
+                      <p class="harga-hotel" id="dua-harga"></p>
+                      <b>Address:</b><p class="list-hotel-description" id="dua-add"> Jalan Pantai Barat No 91, Kawasan Pangandaran, Pangandaran, Indonesia, 46596</p>
+                      <b>Website:</b><p class="list-hotel-description" id="dua-web"> https://booking.myhorison.com/</p>
+                      <b>Description:</b><p class="list-hotel-description" id="dua-short"> Staying at Horison Palma Pangandaran is a good choice when you are visiting Pantai Barat. This hotel is very easy to find since it is strategically positioned close to public facilities.</p>
+                  </div>
+                  <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>-->
+              </div><!-- .col-md-7 close -->
+              <div class="col-md-5 col-sm-12">
+                  <div class="block list-hotel-image">
+                    <img id="dua-img" alt="Img">
+                  </div>
+              </div><!-- .col-md-5 close -->
+            </div>
+          </a>
+
+          <a href="detailHotel.html" class="warna-hitam" onclick="setVisitTiga()">
+            <div class="list-hotel">
+              <div class="col-md-7 col-sm-12 list-hotel-info">
+                  <div>
+                      <h2 class="list-hotel-title" id="tiga-nama"></h2>
+                      <p class="harga-hotel" id="tiga-harga"></p>
+                      <b>Address:</b><p class="list-hotel-description" id="tiga-add"> Jalan Pantai Barat No 91, Kawasan Pangandaran, Pangandaran, Indonesia, 46596</p>
+                      <b>Website:</b><p class="list-hotel-description" id="tiga-web"> https://booking.myhorison.com/</p>
+                      <b>Description:</b><p class="list-hotel-description" id="tiga-short"> Staying at Horison Palma Pangandaran is a good choice when you are visiting Pantai Barat. This hotel is very easy to find since it is strategically positioned close to public facilities.</p>
+                  </div>
+                  <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>-->
+              </div><!-- .col-md-7 close -->
+              <div class="col-md-5 col-sm-12">
+                  <div class="block list-hotel-image">
+                    <img id="tiga-img" alt="Img">
+                  </div>
+              </div><!-- .col-md-5 close -->
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- footer Start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-manu">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Terms</a></li>
+              </ul>
+            </div>
+            <p>Copyright &copy; Design & Developed by <a href="http://www.themefisher.com">Themefisher</a>. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+            
+            
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+            
+    
+    </body>
+</html>

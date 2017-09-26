@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Beach View Hotel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Js -->
+    <script src="js/custom.js" />
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/min/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.js"></script>
+
+    <!-- Google Map -->
+    <!--<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/google-map-init.js"></script>-->
+
+
+    <script src="js/main.js"></script>
+
+  </head>
+  <body>
+
+
+
+    <!-- Header Start -->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- header Nav Start -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <h4><b>Decision Support System for Beach View Hotel</b></h4>
+                </a>
+              </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right"> 
+                    <li><a href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#logInModal">Log In</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header><!-- header close -->
+    
+    <div id="signUpModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Sign up</h3>
+          </div>
+          <div class="modal-body">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Name :</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Please enter your name">
+                            <label>Username :</label>
+                            <input type="tel" class="form-control" id="username" required data-validation-required-message="Please enter your username." placeholder="Please enter the username">
+                            <label>Password :</label>
+                            <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password." placeholder="Please enter the password">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-default">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="logInModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h3 class="modal-title">Sign up</h3>
+          </div>
+          <div class="modal-body">
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls"><label>Username :</label>
+                            <input type="tel" class="form-control" id="username" required data-validation-required-message="Please enter your username." placeholder="username">
+                            <label>Password :</label>
+                            <input type="password" class="form-control" id="password" required data-validation-required-message="Please enter your password." placeholder="password">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-default">Log In</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Slider Start -->
+    <section id="slider">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-11 col-md-offset-1">
+            <div class="block">
+              <h1 class="animated fadeInUp">A DECISION SUPPORT SYSTEM <br> for BEACH VIEW HOTEL</h1>
+              <p class="animated fadeInUp">We love to help you find the best beach view hotel.</p>
+              <div class="btn-group ">
+                <button type="button" class="btn btn-primary-outline"><a href="#start-now">START NOW</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Wrapper Start -->
+    <section id="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <div class="block" id="start-now">
+              <div class="section-title">
+                <h2>FIND YOUR DECISION NOW</h2>
+                <p>Please notes that you can't choose the same priority for the choice.</p>
+              </div>
+              <form onsubmit="">
+                <div class="facility">
+                  <div class="form-group">
+                    <label for="internal">Internal Facilities:</label>
+                    <select class="form-control" id="internal">
+                      <option value="1" selected>1st Priority</option>
+                      <option value="2">2nd Priority</option>
+                      <option value="3">3rd Priority</option>
+                      <option value="4">4th Priority</option>
+                      <option value="5">5th Priority</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="external">External Facilities:</label>
+                    <select class="form-control" id="eksternal">
+                      <option value="1">1st Priority</option>
+                      <option value="2" selected>2nd Priority</option>
+                      <option value="3">3rd Priority</option>
+                      <option value="4">4th Priority</option>
+                      <option value="5">5th Priority</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="distance">Hotel's Distance to Another Destination:</label>
+                    <select class="form-control" id="distance">
+                      <option value="1">1st Priority</option>
+                      <option value="2">2nd Priority</option>
+                      <option value="3" selected>3rd Priority</option>
+                      <option value="4">4th Priority</option>
+                      <option value="5">5th Priority</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="rating">Hotel's Rating:</label>
+                    <select class="form-control" id="rating">
+                      <option value="1">1st Priority</option>
+                      <option value="2">2nd Priority</option>
+                      <option value="3">3rd Priority</option>
+                      <option value="4" selected>4th Priority</option>
+                      <option value="5">5th Priority</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price:</label>
+                    <select class="form-control" id="price">
+                      <option value="1">1st Priority</option>
+                      <option value="2">2nd Priority</option>
+                      <option value="3">3rd Priority</option>
+                      <option value="4">4th Priority</option>
+                      <option value="5" selected>5th Priority</option>
+                    </select>
+                  </div>
+                  <a href="listHotel.html" onclick="getCriteria()" class="btn btn-submit">Submit</a>
+                </div>
+              </form>
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id </p>-->
+            </div>
+          </div><!-- .col-md-7 close -->
+          <div class="col-md-5 col-sm-12">
+            <div class="block user-decision-image">
+              <img src="img/wrapper-img.png" alt="Img">
+            </div>
+          </div><!-- .col-md-5 close -->
+        </div>
+      </div>
+    </section>
+
+    <!-- footer Start -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-manu">
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Terms</a></li>
+              </ul>
+            </div>
+            <p>Copyright &copy; Design & Developed by <a href="http://www.themefisher.com">Themefisher</a>. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+            
+            
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+            
+    
+    </body>
+</html>
